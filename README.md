@@ -51,3 +51,69 @@
 
   **Search Engine Optimisation (SEO)** is the practice of prioritising domains that are easier to index, improving its visibility by attracting more people to it when searching specific keywords.
 
+  ---
+
+**Path 3: Nmap**
+
+  ### Task 1: Understanding Ports
+
+  When a computer runs network services, it opens a "port" to recieve the connection, responsible for making multiple network requests. For example, when you are using a browser, watching a movie, and chatting online simultaneously, data packets are sent to your network connection (Wi-Fi) and single IP Address. However this can result into the data incoming to be tangeled, your computer wouldn't know if an incoming packet was a piece of a youtube video or characters in a chatting message. This is where "ports" handle these network services by assigning each one a different port number, sorting the packets that keep the applications from seeing each other's data.
+
+  Every computer has 65,535 ports that are available, many being standard ports. There are **1,024** standard ports that are "well known" (0-1023), reserved for system services that ever computer agrees on.
+
+  Some types of well known ports: 
+
+    Port 443: HTTPS Webservice
+
+    Port 80: HTTP Webservice
+
+    Port 139: Windows NETBIOS
+
+    Port 445: SMB (Server Message Block)
+
+  For this example, we want to attack our victim with fake traffic, however we don't know which of these ports have an open server, so we use _Nmap_. 
+
+  __Nmap__ connects to each port of the victim in turn. It shows which port is open, closed, or filtered. It is the tool of choice for establishing active connections to a target system inorder to gather detailed information about the user and their resources.
+
+  **Commands**
+  
+    - nmap ( Scan type ) [ args ] { target specification } 
+    
+  Some Scan Types:
+  
+    -sS (TCP SYN scan)
+
+    -sT (TCP Connect Scans)
+      
+    -sN (TCP Null scans)
+
+    -sU (UDP scan)
+
+    -O (Enable OS detection)
+    
+    -sV (Version Detection)
+
+    -v (Increase Verbosity)
+
+    -vv (Further Increase Verbosity) * by a level, so two levels
+
+    -oA (Output scans in three major formats)
+
+    -oN (Output scans in a normal format)
+
+    -oG (Output scans in a grepable format)
+
+  ### Task 2: TCP Connect Scans
+
+  
+  
+    
+  
+ 
+
+  
+    
+
+    
+
+  
